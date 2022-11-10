@@ -33,6 +33,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "corsheaders",
+    'drf_yasg',
 ]
 
 LOCAL_APPS = [
@@ -147,3 +148,4 @@ AWS_S3_REGION_NAME = env("AWS_S3_REGION_NAME")
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_S3_VERIFY = True
+AWS_QUERYSTRING_AUTH = False #To remove the authentication credentials in the query string
