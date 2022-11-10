@@ -1,5 +1,8 @@
 from django.contrib import admin
 # Register your models here.
-from .models import Imageaws
+from api.image_app.models import Imageaws
 
-admin.site.register(Imageaws)
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ("id", "title")
+
+admin.site.register(Imageaws,ImageAdmin)
